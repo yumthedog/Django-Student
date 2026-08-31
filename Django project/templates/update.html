@@ -1,0 +1,41 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+</head>
+<body>
+
+    <h1>Update Student</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ student.name }}" required>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ student.age }}" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ student.email }}" required>
+        <br><br>
+
+        <label>Address:</label>
+        <input type="text" name="address" value="{{ student.address }}" required>
+        <br><br>
+
+        <button type="submit">Update Student</button>
+
+    </form>
+
+    <br>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+
+</body>
+</html>
+```
